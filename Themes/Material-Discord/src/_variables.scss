@@ -296,3 +296,142 @@
 	--shadow-medium: hsl(0,0%,0%,0.28) 0px 8px 24px;
 	--shadow-hard: hsl(0,0%,0%,0.44) 0px 8px 24px;
 }
+
+// Rose Pine color palette (Main variant)
+// Values converted from hex to HSL
+// Source: https://rosepinetheme.com/palette
+%themeRosePine {
+	// Rose Pine Palette
+	--rose-pine-base: hsl(255, 18%, 13%); // #191724
+	--rose-pine-surface: hsl(257, 16%, 15%); // #1f1d2e
+	--rose-pine-overlay: hsl(255, 15%, 19%); // #26233a
+	--rose-pine-muted: hsl(257, 8%, 45%); // #6e6a86
+	--rose-pine-subtle: hsl(256, 8%, 58%); // #908caa
+	--rose-pine-text: hsl(258, 32%, 91%); // #e0def4
+	--rose-pine-love: hsl(344, 73%, 70%); // #eb6f92
+	--rose-pine-gold: hsl(35, 74%, 76%); // #f6c177
+	--rose-pine-rose: hsl(304, 44%, 78%); // #ebbcba
+	--rose-pine-pine: hsl(190, 50%, 74%); // #9ccfd8 (corrected from #31748f)
+	--rose-pine-foam: hsl(190, 50%, 74%); // #9ccfd8
+	--rose-pine-iris: hsl(277, 55%, 78%); // #c4a7e7
+	--rose-pine-highlight-low: hsl(257, 14%, 16%); // #21202e
+	--rose-pine-highlight-med: hsl(256, 13%, 26%); // #403d52
+	--rose-pine-highlight-high: hsl(256, 12%, 32%); // #524f67
+
+	// Material Discord Theme Variables Mapping
+	--app-bg: var(--rose-pine-base);
+	--main-color: var(--rose-pine-base);
+	--main-alt: var(--rose-pine-surface);
+
+	// Accent (using Rose as primary accent)
+	--accent-hue: 304;
+	--accent-saturation: 44%;
+	--accent-lightness: 78%;
+	--accent-hsl: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
+	--accent-text-color: var(--rose-pine-text); // Or a darker variant if needed for contrast
+
+	--accent-hsl--material-you: var(--accent-hsl);
+	--accent-text-color--material-you: var(--accent-text-color);
+	--accent-secondary-color: var(--rose-pine-iris); // Using Iris as secondary accent
+    --accent-secondary-text-color: var(--rose-pine-text);
+
+	// Alerts and Warnings (mapping to Love and Gold)
+	--alert-hue: 344;
+    --alert-saturation: 73%;
+    --alert-lightness: 70%;
+    --alert-hsl: var(--alert-hue), calc(var(--alert-saturation) * var(--saturation-factor)), var(--alert-lightness);
+	--alert-text-color: var(--rose-pine-text);
+
+	--warning-hue: 35;
+    --warning-saturation: 74%;
+    --warning-lightness: 76%;
+    --warning-hsl: var(--warning-hue), calc(var(--warning-saturation) * var(--saturation-factor)), var(--warning-lightness);
+	--warning-text-color: var(--rose-pine-text);
+
+	--reply-hue: var(--warning-hue);
+    --reply-saturation: var(--warning-saturation);
+    --reply-lightness: var(--warning-lightness);
+    --reply-hsl: var(--reply-hue), calc(var(--reply-saturation) * var(--saturation-factor)), var(--reply-lightness);
+	--reply-opacity: 0.3; // Keep or adjust based on visibility
+	--reply-text-color: var(--warning-text-color);
+
+	--success-color: var(--rose-pine-pine); // Using Pine for success
+    --success-text-color: var(--rose-pine-base); // Ensure contrast
+
+	--server-color: transparent;
+	--server-folder-color: var(--rose-pine-overlay);
+
+	--status-picker-color: var(--rose-pine-surface);
+	--sidebar-panel-color: var(--rose-pine-surface);
+
+	--chat-color: var(--rose-pine-base);
+
+	--message-color: var(--rose-pine-surface);
+	--message-color-hover: var(--rose-pine-overlay);
+	--message-color-alt: var(--rose-pine-highlight-low);
+	--attachment-color: var(--rose-pine-overlay);
+
+	--main-textarea-color: var(--rose-pine-surface);
+    --main-textarea-inner-color: var(--rose-pine-base);
+    --main-textarea-button-color: var(--rose-pine-subtle);
+
+	--popout-color: var(--rose-pine-overlay);
+	--popout-color-alt: var(--rose-pine-surface);
+	--popout-header-border: var(--rose-pine-highlight-high);
+	--separator-color: var(--rose-pine-highlight-med);
+	--header-secondary: var(--rose-pine-subtle);
+
+	--profile-body-background-color: var(--rose-pine-surface);
+
+	--input-color: var(--rose-pine-surface);
+	--input-color-alt: var(--rose-pine-overlay);
+	--input-border-color: var(--rose-pine-highlight-high);
+	--input-text-color: var(--rose-pine-text);
+	--input-placeholder-color: var(--rose-pine-muted);
+	--input-pill-color: var(--rose-pine-highlight-med);
+
+	--tab-border-color: var(--rose-pine-highlight-high);
+
+	--interactive-muted: var(--rose-pine-muted);
+	--text-disabled: var(--rose-pine-muted); // Or a slightly darker muted
+
+	--menu-item-hover: var(--rose-pine-highlight-low);
+	--menu-item-select: var(--rose-pine-highlight-med);
+	--menu-item-select-accent-opacity: 0.3; // Keep or adjust
+	--menu-item-text-color: var(--rose-pine-subtle);
+
+	--card-color-outlined: transparent;
+	--card-color-filled: var(--rose-pine-surface);
+    --card-color-hover: var(--rose-pine-overlay);
+    --card-color-active: var(--rose-pine-highlight-med);
+    --card-color-alt: var(--rose-pine-overlay);
+    --card-color-alt-hover: var(--rose-pine-highlight-low);
+    --card-border-color: var(--rose-pine-highlight-high);
+	--card-header-text-color: var(--rose-pine-text);
+	--card-button-color: var(--rose-pine-highlight-low);
+	--card-button-color-hover: var(--rose-pine-highlight-med);
+
+	--activity-card-color: var(--rose-pine-surface);
+	--activity-card-color--hover: var(--rose-pine-overlay);
+	--activity-card-color--active: var(--rose-pine-highlight-low);
+	--activity-card-color--inset: var(--rose-pine-highlight-med);
+
+	--button-link-color: var(--rose-pine-rose); // Using Rose for links
+	--button-link-text-color: var(--rose-pine-rose);
+	--button-border-color: var(--rose-pine-highlight-high);
+
+	--switch-knob-color: var(--rose-pine-subtle);
+	--switch-knob-color-modal: var(--rose-pine-text);
+	--switch-knob-checked: var(--rose-pine-base); // Knob color when checked (against accent slider)
+	--switch-slider-color: var(--rose-pine-highlight-med);
+	--switch-slider-color-modal: var(--switch-slider-color);
+	--switch-slider-checked: hsl(var(--accent-hsl)); // Rose for checked slider
+	--switch-color-modifier: 1.3; // Keep or adjust
+
+	--md-ripple-color: var(--rose-pine-foam); // Using Foam for ripples
+
+	--scrollbar-color: var(--rose-pine-subtle);
+
+	--text-brand: hsl(var(--accent-hsl)); // Rose
+	--text-link: var(--rose-pine-foam); // Foam for general links if different from button links
+}
